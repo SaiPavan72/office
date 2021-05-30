@@ -1,5 +1,4 @@
-<h1>details</h1>
-
+{% for form in data %}
 <b>Name:</b>{{form.office.name}}<br>
 <b>Mobile:</b>{{form.phone}}<br>
 <b>email:</b>{{form.email}}<br>
@@ -7,11 +6,4 @@
 <b>salary:</b>{{form.salary}}<br>
 <b>qualification:</b>{{form.office.qualification}}<br>
 <b>experiance:</b>{{form.office.experiance_in_years}}<br>
-
-
-
-<a href="/itcompany/">back</a><br>
-
-
-
-
+{% endfor %}

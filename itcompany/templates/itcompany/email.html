@@ -1,0 +1,15 @@
+<form action="/itcompany/save_mail/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <b>to :</b> <select name="email">
+    {% for each in mail %}
+    <option>{{each.email}}</option>
+    {% endfor %}
+</select><br>
+    <b>subject :</b><input type="text" name="subject"><br>
+    <b>body :</b><input type="text" name="body"><br>
+    <input type="submit" value="send"><br>
+
+</form>
+<a href="/itcompany/details/">back</a><br>
+<a href="/itcompany/logout/">logout</a><br>

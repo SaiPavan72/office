@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.forms import ModelForm
 
-from itcompany.models import Application, Employee
+from itcompany.models import Application, Employee, Team, Project, Gmail
 
 
 class ApplicationForm(ModelForm):
@@ -19,7 +19,22 @@ class EmployeeForm(ModelForm):
         fields = "__all__"
 
 
+class TeamForm(ModelForm):
+    class Meta:
+        model = Team
+        fields = "__all__"
 
+
+class ProjectForm(ModelForm):
+    class Meta:
+        model = Project
+        fields = "__all__"
+
+
+class GmailForm(ModelForm):
+    class Meta:
+        model = Gmail
+        fields = ['reciever', 'subject', 'body']
 
 
 class NewUserForm(UserCreationForm):

@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 class Role(models.Model):
     """ different roles present in company which developed by super user"""
     role = models.CharField(max_length=100)
-    desc = models.CharField(max_length=100)
+
 
     objects = models.Manager()
 

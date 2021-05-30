@@ -1,0 +1,9 @@
+<form action="/itcompany/save_team/" method="post">
+    {% csrf_token %}
+
+    {{form.as_p}}
+    <input type="submit" value="save">
+</form>
+<a href="/itcompany/total_teams/">back</a><br>
+
+<a href="/itcompany/logout/">logout</a><br>
